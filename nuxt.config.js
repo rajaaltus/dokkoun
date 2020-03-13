@@ -12,7 +12,15 @@ export default {
       { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cRubik:400,500,700&display=swap' },
+      { rel: 'stylesheet', type: 'text/css', href: '/css/libraries.css'},
+      { rel: 'stylesheet', type: 'text/css', href: '/css/style.css'}
+    ],
+    script: [
+      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript', ssr: false},
+      { src: '/js/plugins.js', type: 'text/javascript', ssr: false},
+      { src: '/js/main.js', type: 'text/javascript', ssr: false }
     ]
   },
   /*
@@ -23,6 +31,7 @@ export default {
   ** Global CSS
   */
   css: [
+   '@/assets/scss/styles.scss'
   ],
   /*
   ** Plugins to load before mounting the App
