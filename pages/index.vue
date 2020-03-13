@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Header />
-    <Slider />
+    <Header :logo_url=logo_url :logo_dark_url=logo_dark_url />
+    <Slider :sliderData=sliderData />
     <Feature />
     <About />
     <Services />
@@ -9,7 +9,6 @@
     <Feature2 />
     <QuoteForm />
     <Testimonial />
-    <Footer />
   </div>
 </template>
 
@@ -23,13 +22,13 @@ import Carousel from '@/components/Carousel'
 import Feature2 from '@/components/Feature2'
 import QuoteForm from '@/components/QuoteForm'
 import Testimonial from '@/components/Testimonial'
-import Footer from '@/components/Footer'
 export default {
   head() {
     return {
       title: 'Dokkoun Sole Co., Ltd - Vientiane, Laos'
     }
   },
+  layout: 'home',
   components: {
     Header,
     Slider,
@@ -39,8 +38,44 @@ export default {
     Carousel,
     Feature2,
     QuoteForm,
-    Testimonial,
-    Footer
-  }
+    Testimonial
+   
+  },
+  data: () => ({
+    logo_url: '/images/logo/logo_square.svg',
+    logo_dark_url: '/images/logo/logo_dark.png',
+    sliderData: [
+      {
+        img_url: '/images/sliders/slider1.jpg',
+        title: 'Industery Solutions!',
+        description: 'To further develop our corporate strengths we have established a corporate mandate to maintain strong core values that truly reflect the companys philosophy.',
+        btn_link: '#',
+        btn_text: 'Our Services',
+        panel_icon: 'icon-manufacturing-plant',
+        panel_title: 'Our Mission',
+        panel_description: 'Utilising latest processing solutions, and decades of work experience.',
+      },
+      {
+        img_url: '/images/sliders/2.jpg',
+        title: 'Reliable Effective',
+        description: 'To further develop our corporate strengths we have established a corporate mandate to maintain strong core values that truly reflect the companys philosophy.',
+        btn_link: '#',
+        btn_text: 'Our Services',
+        panel_icon: 'icon-wheel',
+        panel_title: 'Our Vision',
+        panel_description: 'Utilising latest processing solutions, and decades of work experience.',
+      },
+      {
+        img_url: '/images/sliders/3.jpg',
+        title: 'Safety & Integrity',
+        description: 'To further develop our corporate strengths we have established a corporate mandate to maintain strong core values that truly reflect the companys philosophy.',
+        btn_link: '#',
+        btn_text: 'Our Services',
+        panel_icon: 'icon-container',
+        panel_title: 'Our Value',
+        panel_description: 'Utilising latest processing solutions, and decades of work experience.',
+      }
+    ]
+  })
 }
 </script>

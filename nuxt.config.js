@@ -18,9 +18,9 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/css/style.css'}
     ],
     script: [
-      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript' },
-      { src: '/js/plugins.js', type: 'text/javascript' },
-      { src: '/js/main.js', type: 'text/javascript' }
+      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript', ssr: false},
+      { src: '/js/plugins.js', type: 'text/javascript', ssr: false},
+      { src: '/js/main.js', type: 'text/javascript', ssr: false }
     ]
   },
   /*
