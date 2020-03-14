@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header :logo_url=logo_url :logo_dark_url=logo_dark_url />
+    <Header :logo_url="logo_url" :logo_dark_url="logo_dark_url" />
     <div class="container">
     <nuxt />
     </div>

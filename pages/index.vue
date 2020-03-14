@@ -1,7 +1,7 @@
 <template>
   <div>
-    <Header :logo_url=logo_url :logo_dark_url=logo_dark_url />
-    <Slider :sliderData=sliderData />
+    <Header :logo_url="logo_url" :logo_dark_url="logo_dark_url" />
+    <Slider :sliderData="sliderData" />
     <Feature />
     <About />
     <Services />

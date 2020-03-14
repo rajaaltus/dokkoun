@@ -18,10 +18,13 @@ export default {
       { rel: 'stylesheet', type: 'text/css', href: '/css/style.css'}
     ],
     script: [
-      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript', ssr: false},
-      { src: '/js/plugins.js', type: 'text/javascript', ssr: false},
-      { src: '/js/main.js', type: 'text/javascript', ssr: false }
+      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript', difer: true},
+      { src: '/js/plugins.js', type: 'text/javascript', difer: true},
+      { src: '/js/main.js', type: 'text/javascript', difer: true }
     ]
+  },
+  generate: {
+    fallback: true
   },
   /*
   ** Customize the progress-bar color
