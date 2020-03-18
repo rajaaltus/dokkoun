@@ -1,14 +1,15 @@
 <template>
   <div>
      <Header :logo_url="logo_url" :logo_dark_url="logo_dark_url" />
-    <PageTitle />
-    <h1>Contact us</h1>
+    <PageTitle :titleInfo="titleInfo" />
+    <Contact />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header'
 import PageTitle from '@/components/PageTitle'
+import Contact from '@/components/Contact'
 export default {
   head() {
     return {
@@ -18,11 +19,18 @@ export default {
   },
   components: {
     Header,
-    PageTitle
+    PageTitle,
+    Contact
   },
   data: () => ({
     logo_url: '/images/logo/logo_square.svg',
     logo_dark_url: '/images/logo/logo_dark.png',
+    titleInfo: 
+    { 
+      img_url: '/images/sliders/slider1.jpg',
+      subTitle: 'Building The Future, Restoring The Past',
+      title: 'Individually Assess Each Plan & Offer Optimal Solutions!'
+    },
   })
 }
 </script>
