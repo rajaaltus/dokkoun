@@ -1,7 +1,7 @@
 <template>
   <div>
      <Header :logo_url="logo_url" :logo_dark_url="logo_dark_url" />
-    <PageTitle />
+    <PageTitle :titleInfo="titleInfo" />
     <h1>Our Products</h1>
   </div>
 </template>
@@ -23,6 +23,12 @@ export default {
   data: () => ({
     logo_url: '/images/logo/logo_square.svg',
     logo_dark_url: '/images/logo/logo_dark.png',
+    titleInfo: 
+    { 
+      img_url: '/images/sliders/slider1.jpg',
+      subTitle: 'Building The Future, Restoring The Past',
+      title: 'Individually Assess Each Plan & Offer Optimal Solutions!'
+    },
   })
 }
 </script>

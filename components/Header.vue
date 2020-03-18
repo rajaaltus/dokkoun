@@ -28,9 +28,9 @@
               <li class="nav__item">
                 <nuxt-link to="/products" class="nav__item-link">Products</nuxt-link>
               </li>
-               <li class="nav__item">
+               <!-- <li class="nav__item">
                 <nuxt-link to="/portfolio" class="nav__item-link">Portfolio</nuxt-link>
-              </li>
+              </li> -->
               <li class="nav__item">
                 <nuxt-link to="/contact" class="nav__item-link">Contacts</nuxt-link>
               </li>
@@ -38,18 +38,17 @@
           </div>
           <div class="navbar-modules">
             <ul class="list-unstyled d-flex align-items-center modules__btns-list">
-              <li><a href="#" class="module__btn module__btn-search"><i class="fa fa-search"></i></a></li>
-              <li class="d-none d-lg-block"><a href="request-quote.html" class="btn btn__primary module__btn-request">
+              <li class="d-none d-lg-block"><a href="/contact" class="btn btn__primary module__btn-request">
                   <span>Request A Quote</span><i class="icon-arrow-right2"></i>
                 </a></li>
               <li class="d-none d-lg-block">
-                <div class="module__btn module__btn-phone d-flex align-items-center">
+                <!-- <div class="module__btn module__btn-phone d-flex align-items-center">
                   <i class="icon-phone mr-3"></i>
                   <div>
                     <span class="d-block">Call Us:</span>
                     <a href="tel:55-654-541-17">+55 654 541 17</a>
                   </div>
-                </div>
+                </div> -->
               </li>
             </ul>
           </div>
