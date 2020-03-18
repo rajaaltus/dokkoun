@@ -12,27 +12,27 @@
           <div class="collapse navbar-collapse" id="mainNavigation">
             <ul class="navbar-nav ml-auto">
               <li class="nav__item">
-                <a href="/" class="nav__item-link active">Home</a>
+                <nuxt-link to="/" class="nav__item-link active">Home</nuxt-link>
               </li>
               <li class="nav__item with-dropdown">
-                <a href="/about" class="dropdown-toggle nav__item-link">Company</a>
+                <nuxt-link to="/about" class="dropdown-toggle nav__item-link">Company</nuxt-link>
                 <i class="fa fa-angle-right" data-toggle="dropdown"></i>
                 <ul class="dropdown-menu">
-                  <li class="nav__item"><a href="/about" class="nav__item-link">About Us</a></li>
-                  <li class="nav__item"><a href="/team" class="nav__item-link">Leadership Team</a></li>
+                  <li class="nav__item"><nuxt-link to="/about" class="nav__item-link">About Us</nuxt-link></li>
+                  <li class="nav__item"><nuxt-link to="/team" class="nav__item-link">Leadership Team</nuxt-link></li>
                 </ul>
               </li>
               <li class="nav__item">
-                <a href="/services" class="nav__item-link">Services</a>
+                <nuxt-link to="/services" class="nav__item-link">Services</nuxt-link>
               </li>
               <li class="nav__item">
-                <a href="/products" class="nav__item-link">Products</a>
+                <nuxt-link to="/products" class="nav__item-link">Products</nuxt-link>
               </li>
                <li class="nav__item">
-                <a href="/portfolio" class="nav__item-link">Portfolio</a>
+                <nuxt-link to="/portfolio" class="nav__item-link">Portfolio</nuxt-link>
               </li>
               <li class="nav__item">
-                <a href="/contact" class="nav__item-link">Contacts</a>
+                <nuxt-link to="/contact" class="nav__item-link">Contacts</nuxt-link>
               </li>
             </ul>
           </div>
@@ -56,6 +56,7 @@
         </div>
       </nav>
     </header>
+    
 </template>
 
 <script>

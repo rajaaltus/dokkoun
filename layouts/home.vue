@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="wrapper"> 
     <nuxt />
     <Footer />
   </div>
@@ -10,6 +10,7 @@ import Footer from '@/components/Footer'
 export default {
   components: {
     Footer
-  }
+  },
+  
 }
 </script>

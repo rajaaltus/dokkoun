@@ -14,18 +14,19 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css?family=Roboto:400,500,700%7cRubik:400,500,700&display=swap' },
-      { rel: 'stylesheet', type: 'text/css', href: '/css/libraries.css'},
-      { rel: 'stylesheet', type: 'text/css', href: '/css/style.css'}
+      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' },
+      { rel: 'stylesheet', href: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css' },
+      { rel: 'stylesheet', href: '/css/libraries.css'},
+      { rel: 'stylesheet', href: '/css/style.css'}
     ],
     script: [
-      { src: '/js/jquery-3.3.1.min.js', type: 'text/javascript', difer: true},
-      { src: '/js/plugins.js', type: 'text/javascript', difer: true},
-      { src: '/js/main.js', type: 'text/javascript', difer: true }
-    ]
+      { src: 'https://code.jquery.com/jquery-3.3.1.slim.min.js', type: 'text/javascript', difer: true },
+      { src: 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js', type: 'text/javascript' },
+      { src: 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', type: 'text/javascript' },
+      { src: '/js/plugins.js', ssr: false, difer: true },
+    ],
   },
-  generate: {
-    fallback: true
-  },
+  
   /*
   ** Customize the progress-bar color
   */
@@ -34,12 +35,13 @@ export default {
   ** Global CSS
   */
   css: [
-   '@/assets/scss/styles.scss'
+    '@/assets/scss/styles.scss'
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
+   { ssr: false, src: 'plugins/owl.js' }
   ],
   /*
   ** Nuxt.js dev-modules
@@ -52,6 +54,8 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org
     'bootstrap-vue/nuxt',
+    '@nuxtjs/component-cache',
+    'vue-scrollto/nuxt',
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
   ],
@@ -65,6 +69,13 @@ export default {
   ** Build configuration
   */
   build: {
+    postcss: {
+      preset: {
+        features: {
+          customProperties: false
+        }
+      }
+    },
     /*
     ** You can extend webpack config here
     */
